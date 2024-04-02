@@ -1,0 +1,12 @@
+module leveltopulse(clk, level, pulse);
+	input clk, level;
+	output pulse;
+	
+	wire A, B;
+	
+	FFD(level, clk, A);
+	FFD(A, clk, B);
+	
+	and(pulse, A, ~B);
+	
+endmodule

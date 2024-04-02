@@ -1,0 +1,195 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/luism/OneDrive/Documentos/PBL3e4_CD/simulation/qsim
+vmaquinaprim
+!s110 1686716274
+!i10b 1
+!s100 f>a<l56Njg1gaAfCJi``@1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IZSH56XWnA[R<@;b>^8kMH2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1686716273
+Z3 8PBL4.vo
+Z4 FPBL4.vo
+!i122 106
+L0 32 566
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1686716274.000000
+Z7 !s107 PBL4.vo|
+Z8 !s90 -work|work|PBL4.vo|
+!i113 1
+Z9 o-work work
+Z10 tCvgOpt 0
+vmaquinaprim_vlg_vec_tst
+!s110 1686716275
+!i10b 1
+!s100 ]d>DGLan[G1b6micW675d2
+R1
+IiYm2CZ3_c1:COP5kT9<7=1
+R2
+R0
+w1686716272
+8WaveformMprim.vwf.vt
+FWaveformMprim.vwf.vt
+!i122 107
+L0 30 117
+R5
+r1
+!s85 0
+31
+R6
+!s107 WaveformMprim.vwf.vt|
+!s90 -work|work|WaveformMprim.vwf.vt|
+!i113 1
+R9
+R10
+vmaquinasecund
+Z11 !s110 1686711408
+!i10b 1
+!s100 K:HWF34FGH>QN7TP=V?2U1
+R1
+IkKocAZDIQb`=>4_NTaU=c0
+R2
+R0
+w1686711407
+R3
+R4
+!i122 40
+L0 32 305
+R5
+r1
+!s85 0
+31
+Z12 !s108 1686711408.000000
+R7
+R8
+!i113 1
+R9
+R10
+vmaquinasecund_vlg_vec_tst
+R11
+!i10b 1
+!s100 AcnlY>E?g_RK<2`M;B6:D3
+R1
+I]d@5jHKQa:?2DmI<kHnMd1
+R2
+R0
+w1686711406
+8WaveformM2secunD.vwf.vt
+FWaveformM2secunD.vwf.vt
+!i122 41
+L0 30 61
+R5
+r1
+!s85 0
+31
+R12
+!s107 WaveformM2secunD.vwf.vt|
+!s90 -work|work|WaveformM2secunD.vwf.vt|
+!i113 1
+R9
+R10
+vmaquinatres
+Z13 !s110 1686709653
+!i10b 1
+!s100 zGM<z>mKGXakCkAbM1Q070
+R1
+I=KWSY8>c0VGH4LWCFM3IX0
+R2
+R0
+w1686709652
+R3
+R4
+!i122 14
+L0 32 587
+R5
+r1
+!s85 0
+31
+Z14 !s108 1686709653.000000
+R7
+R8
+!i113 1
+R9
+R10
+vmaquinatres_vlg_vec_tst
+R13
+!i10b 1
+!s100 :0bG?0i3cfa32@PcobNQ41
+R1
+IR[=iD<dWgM0=JF?:b]C;l0
+R2
+R0
+w1686709651
+8WaveformTESTEmaquina3.vwf.vt
+FWaveformTESTEmaquina3.vwf.vt
+!i122 15
+L0 30 60
+R5
+r1
+!s85 0
+31
+R14
+!s107 WaveformTESTEmaquina3.vwf.vt|
+!s90 -work|work|WaveformTESTEmaquina3.vwf.vt|
+!i113 1
+R9
+R10
+vnewmaquina3
+Z15 !s110 1686710139
+!i10b 1
+!s100 Nc8PzC3fH^8gH@b8BR4bM0
+R1
+IWohH24?0zmzMNCU[T^2dX2
+R2
+R0
+w1686710138
+R3
+R4
+!i122 32
+L0 32 490
+R5
+r1
+!s85 0
+31
+Z16 !s108 1686710139.000000
+R7
+R8
+!i113 1
+R9
+R10
+vnewmaquina3_vlg_vec_tst
+R15
+!i10b 1
+!s100 bef00jjBlHjTLeE:RCz>e0
+R1
+I2I45lg_5E>dM@L4dGS2^U3
+R2
+R0
+w1686710137
+8WaveformNEWm3.vwf.vt
+FWaveformNEWm3.vwf.vt
+!i122 33
+L0 30 71
+R5
+r1
+!s85 0
+31
+R16
+!s107 WaveformNEWm3.vwf.vt|
+!s90 -work|work|WaveformNEWm3.vwf.vt|
+!i113 1
+R9
+R10

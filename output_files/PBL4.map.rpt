@@ -1,0 +1,536 @@
+Analysis & Synthesis report for PBL4
+Wed Jun 14 16:10:26 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "newmaquina3:comb_45|flipflopD:comb_25"
+ 10. Port Connectivity Checks: "newmaquina3:comb_45|flipflopD:comb_24"
+ 11. Port Connectivity Checks: "newmaquina3:comb_45|flipflopD:comb_23"
+ 12. Port Connectivity Checks: "decodSENSORES:comb_21|flipflopT:comb_3"
+ 13. Port Connectivity Checks: "maquinaprim:comb_20|flipflopD:comb_31"
+ 14. Port Connectivity Checks: "maquinaprim:comb_20|flipflopD:comb_30"
+ 15. Port Connectivity Checks: "maquinaprim:comb_20|flipflopD:comb_29"
+ 16. Port Connectivity Checks: "maquinaprim:comb_20"
+ 17. Port Connectivity Checks: "segmentos:comb_17"
+ 18. Port Connectivity Checks: "leveltopulse:comb_3|flipflopD:comb_4"
+ 19. Port Connectivity Checks: "leveltopulse:comb_3|flipflopD:comb_3"
+ 20. Analysis & Synthesis Messages
+ 21. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Wed Jun 14 16:10:26 2023       ;
+; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name               ; PBL4                                        ;
+; Top-level Entity Name       ; PBL4                                        ;
+; Family                      ; MAX II                                      ;
+; Total logic elements        ; 70                                          ;
+; Total pins                  ; 34                                          ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EPM240T100C5       ;                    ;
+; Top-level entity name                                            ; PBL4               ; PBL4               ;
+; Family name                                                      ; MAX II             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                       ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                         ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
+; maquinasecund.v                  ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/PBL3e4_CD/maquinasecund.v      ;         ;
+; leveltopulse.v                   ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/PBL3e4_CD/leveltopulse.v       ;         ;
+; PBL4.v                           ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/PBL3e4_CD/PBL4.v               ;         ;
+; decodSENSORES.v                  ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/PBL3e4_CD/decodSENSORES.v      ;         ;
+; decodBEBIDA.v                    ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/PBL3e4_CD/decodBEBIDA.v        ;         ;
+; demux1x2.v                       ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/PBL3e4_CD/demux1x2.v           ;         ;
+; flipflopT.v                      ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/PBL3e4_CD/flipflopT.v          ;         ;
+; maquinaprim.v                    ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/PBL3e4_CD/maquinaprim.v        ;         ;
+; flipflopD.v                      ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/PBL3e4_CD/flipflopD.v          ;         ;
+; decodERRORdeBEBIBA.v             ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/PBL3e4_CD/decodERRORdeBEBIBA.v ;         ;
+; divisor.v                        ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/PBL3e4_CD/divisor.v            ;         ;
+; newmaquina3.v                    ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/PBL3e4_CD/newmaquina3.v        ;         ;
+; segmentos.v                      ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/PBL3e4_CD/segmentos.v          ;         ;
+; mux4_1.v                         ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/PBL3e4_CD/mux4_1.v             ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                 ;
++---------------------------------------------+-------------------------------+
+; Resource                                    ; Usage                         ;
++---------------------------------------------+-------------------------------+
+; Total logic elements                        ; 70                            ;
+;     -- Combinational with no register       ; 33                            ;
+;     -- Register only                        ; 1                             ;
+;     -- Combinational with a register        ; 36                            ;
+;                                             ;                               ;
+; Logic element usage by number of LUT inputs ;                               ;
+;     -- 4 input functions                    ; 23                            ;
+;     -- 3 input functions                    ; 13                            ;
+;     -- 2 input functions                    ; 3                             ;
+;     -- 1 input functions                    ; 30                            ;
+;     -- 0 input functions                    ; 0                             ;
+;                                             ;                               ;
+; Logic elements by mode                      ;                               ;
+;     -- normal mode                          ; 70                            ;
+;     -- arithmetic mode                      ; 0                             ;
+;     -- qfbk mode                            ; 0                             ;
+;     -- register cascade mode                ; 0                             ;
+;     -- synchronous clear/load mode          ; 0                             ;
+;     -- asynchronous clear/load mode         ; 3                             ;
+;                                             ;                               ;
+; Total registers                             ; 37                            ;
+; I/O pins                                    ; 34                            ;
+; Maximum fan-out node                        ; newmaquina3:comb_45|WideAnd11 ;
+; Maximum fan-out                             ; 10                            ;
+; Total fan-out                               ; 231                           ;
+; Average fan-out                             ; 2.22                          ;
++---------------------------------------------+-------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                            ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                           ; Entity Name   ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------+---------------+--------------+
+; |PBL4                      ; 70 (5)      ; 37           ; 0          ; 34   ; 0            ; 33 (5)       ; 1 (0)             ; 36 (0)           ; 0 (0)           ; 0 (0)      ; |PBL4                                         ; PBL4          ; work         ;
+;    |decodBEBIDA:comb_44|   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PBL4|decodBEBIDA:comb_44                     ; decodBEBIDA   ; work         ;
+;    |decodSENSORES:comb_21| ; 1 (0)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |PBL4|decodSENSORES:comb_21                   ; decodSENSORES ; work         ;
+;       |flipflopT:comb_3|   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|decodSENSORES:comb_21|flipflopT:comb_3  ; flipflopT     ; work         ;
+;    |divisor:comb_8|        ; 28 (0)      ; 28           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 28 (0)           ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8                          ; divisor       ; work         ;
+;       |flipflopT:comb_10|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:comb_10        ; flipflopT     ; work         ;
+;       |flipflopT:comb_11|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:comb_11        ; flipflopT     ; work         ;
+;       |flipflopT:comb_12|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:comb_12        ; flipflopT     ; work         ;
+;       |flipflopT:comb_13|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:comb_13        ; flipflopT     ; work         ;
+;       |flipflopT:comb_14|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:comb_14        ; flipflopT     ; work         ;
+;       |flipflopT:comb_4|   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:comb_4         ; flipflopT     ; work         ;
+;       |flipflopT:comb_5|   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:comb_5         ; flipflopT     ; work         ;
+;       |flipflopT:comb_6|   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:comb_6         ; flipflopT     ; work         ;
+;       |flipflopT:comb_7|   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:comb_7         ; flipflopT     ; work         ;
+;       |flipflopT:comb_8|   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:comb_8         ; flipflopT     ; work         ;
+;       |flipflopT:comb_9|   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:comb_9         ; flipflopT     ; work         ;
+;       |flipflopT:fl10|     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:fl10           ; flipflopT     ; work         ;
+;       |flipflopT:fl11|     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:fl11           ; flipflopT     ; work         ;
+;       |flipflopT:fl13|     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:fl13           ; flipflopT     ; work         ;
+;       |flipflopT:fl14|     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:fl14           ; flipflopT     ; work         ;
+;       |flipflopT:fl15|     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:fl15           ; flipflopT     ; work         ;
+;       |flipflopT:fl16|     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:fl16           ; flipflopT     ; work         ;
+;       |flipflopT:fl17|     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:fl17           ; flipflopT     ; work         ;
+;       |flipflopT:fl18|     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:fl18           ; flipflopT     ; work         ;
+;       |flipflopT:fl1|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:fl1            ; flipflopT     ; work         ;
+;       |flipflopT:fl2|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:fl2            ; flipflopT     ; work         ;
+;       |flipflopT:fl3|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:fl3            ; flipflopT     ; work         ;
+;       |flipflopT:fl4|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:fl4            ; flipflopT     ; work         ;
+;       |flipflopT:fl5|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:fl5            ; flipflopT     ; work         ;
+;       |flipflopT:fl6|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:fl6            ; flipflopT     ; work         ;
+;       |flipflopT:fl7|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:fl7            ; flipflopT     ; work         ;
+;       |flipflopT:fl8|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:fl8            ; flipflopT     ; work         ;
+;       |flipflopT:fl9|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|divisor:comb_8|flipflopT:fl9            ; flipflopT     ; work         ;
+;    |leveltopulse:comb_3|   ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |PBL4|leveltopulse:comb_3                     ; leveltopulse  ; work         ;
+;       |flipflopD:comb_3|   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|leveltopulse:comb_3|flipflopD:comb_3    ; flipflopD     ; work         ;
+;       |flipflopD:comb_4|   ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PBL4|leveltopulse:comb_3|flipflopD:comb_4    ; flipflopD     ; work         ;
+;    |maquinaprim:comb_20|   ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PBL4|maquinaprim:comb_20                     ; maquinaprim   ; work         ;
+;    |maquinasecund:comb_41| ; 4 (1)       ; 3            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |PBL4|maquinasecund:comb_41                   ; maquinasecund ; work         ;
+;       |flipflopD:comb_18|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|maquinasecund:comb_41|flipflopD:comb_18 ; flipflopD     ; work         ;
+;       |flipflopD:comb_19|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|maquinasecund:comb_41|flipflopD:comb_19 ; flipflopD     ; work         ;
+;       |flipflopD:comb_20|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|maquinasecund:comb_41|flipflopD:comb_20 ; flipflopD     ; work         ;
+;    |newmaquina3:comb_45|   ; 10 (7)      ; 3            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |PBL4|newmaquina3:comb_45                     ; newmaquina3   ; work         ;
+;       |flipflopD:comb_23|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|newmaquina3:comb_45|flipflopD:comb_23   ; flipflopD     ; work         ;
+;       |flipflopD:comb_24|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|newmaquina3:comb_45|flipflopD:comb_24   ; flipflopD     ; work         ;
+;       |flipflopD:comb_25|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL4|newmaquina3:comb_45|flipflopD:comb_25   ; flipflopD     ; work         ;
+;    |segmentos:comb_17|     ; 15 (0)      ; 0            ; 0          ; 0    ; 0            ; 15 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PBL4|segmentos:comb_17                       ; segmentos     ; work         ;
+;       |mux4_1:comb_11|     ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PBL4|segmentos:comb_17|mux4_1:comb_11        ; mux4_1        ; work         ;
+;       |mux4_1:comb_5|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PBL4|segmentos:comb_17|mux4_1:comb_5         ; mux4_1        ; work         ;
+;       |mux4_1:comb_6|      ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PBL4|segmentos:comb_17|mux4_1:comb_6         ; mux4_1        ; work         ;
+;       |mux4_1:comb_7|      ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PBL4|segmentos:comb_17|mux4_1:comb_7         ; mux4_1        ; work         ;
+;       |mux4_1:comb_8|      ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PBL4|segmentos:comb_17|mux4_1:comb_8         ; mux4_1        ; work         ;
+;       |mux4_1:comb_9|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PBL4|segmentos:comb_17|mux4_1:comb_9         ; mux4_1        ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 37    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 3     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "newmaquina3:comb_45|flipflopD:comb_25"                                                                                                       ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; clear ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "newmaquina3:comb_45|flipflopD:comb_24"                                                                                                       ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; clear ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "newmaquina3:comb_45|flipflopD:comb_23"                                                                                                       ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; clear ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "decodSENSORES:comb_21|flipflopT:comb_3"                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; t     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; t[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; reset ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "maquinaprim:comb_20|flipflopD:comb_31"                                                                                                       ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; clear ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "maquinaprim:comb_20|flipflopD:comb_30"                                                                                                       ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; clear ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "maquinaprim:comb_20|flipflopD:comb_29"                                                                                                                                             ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; D     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; D[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; clear ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                                       ;
++-------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "maquinaprim:comb_20"                                                                                     ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; y1   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; y2   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; EES  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "segmentos:comb_17"     ;
++-----------------+-------+----------+--------------+
+; Port            ; Type  ; Severity ; Details      ;
++-----------------+-------+----------+--------------+
+; segmentosespera ; Input ; Info     ; Stuck at VCC ;
++-----------------+-------+----------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "leveltopulse:comb_3|flipflopD:comb_4"                                                                                                        ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; clear ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "leveltopulse:comb_3|flipflopD:comb_3"                                                                                                        ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                                                                                                                      ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; clear ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Wed Jun 14 16:10:19 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PBL4 -c PBL4
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file maquinasecund.v
+    Info (12023): Found entity 1: maquinasecund File: /home/aluno/Downloads/PBL3e4_CD/maquinasecund.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file leveltopulse.v
+    Info (12023): Found entity 1: leveltopulse File: /home/aluno/Downloads/PBL3e4_CD/leveltopulse.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file PBL4.v
+    Info (12023): Found entity 1: PBL4 File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file decodSENSORES.v
+    Info (12023): Found entity 1: decodSENSORES File: /home/aluno/Downloads/PBL3e4_CD/decodSENSORES.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file decodBEBIDA.v
+    Info (12023): Found entity 1: decodBEBIDA File: /home/aluno/Downloads/PBL3e4_CD/decodBEBIDA.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file demux1x2.v
+    Info (12023): Found entity 1: demux1x2 File: /home/aluno/Downloads/PBL3e4_CD/demux1x2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file flipflopT.v
+    Info (12023): Found entity 1: flipflopT File: /home/aluno/Downloads/PBL3e4_CD/flipflopT.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file maquinaprim.v
+    Info (12023): Found entity 1: maquinaprim File: /home/aluno/Downloads/PBL3e4_CD/maquinaprim.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file flipflopD.v
+    Info (12023): Found entity 1: flipflopD File: /home/aluno/Downloads/PBL3e4_CD/flipflopD.v Line: 1
+Warning (12019): Can't analyze file -- file maquinasecun.v is missing
+Warning (12019): Can't analyze file -- file temporizador.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file decodERRORdeBEBIBA.v
+    Info (12023): Found entity 1: decodERRORdeBEBIBA File: /home/aluno/Downloads/PBL3e4_CD/decodERRORdeBEBIBA.v Line: 1
+Warning (12019): Can't analyze file -- file maquinatres.v is missing
+Warning (12019): Can't analyze file -- file decoESPERA.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file divisor.v
+    Info (12023): Found entity 1: divisor File: /home/aluno/Downloads/PBL3e4_CD/divisor.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file newmaquina3.v
+    Info (12023): Found entity 1: newmaquina3 File: /home/aluno/Downloads/PBL3e4_CD/newmaquina3.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file segmentos.v
+    Info (12023): Found entity 1: segmentos File: /home/aluno/Downloads/PBL3e4_CD/segmentos.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux4_1.v
+    Info (12023): Found entity 1: mux4_1 File: /home/aluno/Downloads/PBL3e4_CD/mux4_1.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at maquinasecund.v(14): created implicit net for "enter" File: /home/aluno/Downloads/PBL3e4_CD/maquinasecund.v Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at PBL4.v(22): created implicit net for "tempo" File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 22
+Warning (10236): Verilog HDL Implicit Net warning at PBL4.v(64): created implicit net for "cafe3" File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 64
+Warning (10236): Verilog HDL Implicit Net warning at decodBEBIDA.v(6): created implicit net for "b" File: /home/aluno/Downloads/PBL3e4_CD/decodBEBIDA.v Line: 6
+Warning (10236): Verilog HDL Implicit Net warning at decodBEBIDA.v(7): created implicit net for "c" File: /home/aluno/Downloads/PBL3e4_CD/decodBEBIDA.v Line: 7
+Warning (10236): Verilog HDL Implicit Net warning at decodBEBIDA.v(8): created implicit net for "d" File: /home/aluno/Downloads/PBL3e4_CD/decodBEBIDA.v Line: 8
+Warning (10236): Verilog HDL Implicit Net warning at decodBEBIDA.v(9): created implicit net for "e" File: /home/aluno/Downloads/PBL3e4_CD/decodBEBIDA.v Line: 9
+Warning (10236): Verilog HDL Implicit Net warning at decodBEBIDA.v(10): created implicit net for "f" File: /home/aluno/Downloads/PBL3e4_CD/decodBEBIDA.v Line: 10
+Critical Warning (10846): Verilog HDL Instantiation warning at maquinasecund.v(33): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/maquinasecund.v Line: 33
+Critical Warning (10846): Verilog HDL Instantiation warning at maquinasecund.v(34): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/maquinasecund.v Line: 34
+Critical Warning (10846): Verilog HDL Instantiation warning at maquinasecund.v(35): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/maquinasecund.v Line: 35
+Critical Warning (10846): Verilog HDL Instantiation warning at leveltopulse.v(7): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/leveltopulse.v Line: 7
+Critical Warning (10846): Verilog HDL Instantiation warning at leveltopulse.v(8): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/leveltopulse.v Line: 8
+Critical Warning (10846): Verilog HDL Instantiation warning at PBL4.v(10): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 10
+Critical Warning (10846): Verilog HDL Instantiation warning at PBL4.v(14): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 14
+Critical Warning (10846): Verilog HDL Instantiation warning at PBL4.v(15): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 15
+Critical Warning (10846): Verilog HDL Instantiation warning at divisor.v(31): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/divisor.v Line: 31
+Critical Warning (10846): Verilog HDL Instantiation warning at divisor.v(32): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/divisor.v Line: 32
+Critical Warning (10846): Verilog HDL Instantiation warning at divisor.v(33): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/divisor.v Line: 33
+Critical Warning (10846): Verilog HDL Instantiation warning at divisor.v(34): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/divisor.v Line: 34
+Critical Warning (10846): Verilog HDL Instantiation warning at divisor.v(35): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/divisor.v Line: 35
+Critical Warning (10846): Verilog HDL Instantiation warning at divisor.v(36): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/divisor.v Line: 36
+Critical Warning (10846): Verilog HDL Instantiation warning at divisor.v(37): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/divisor.v Line: 37
+Critical Warning (10846): Verilog HDL Instantiation warning at divisor.v(38): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/divisor.v Line: 38
+Critical Warning (10846): Verilog HDL Instantiation warning at divisor.v(39): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/divisor.v Line: 39
+Critical Warning (10846): Verilog HDL Instantiation warning at divisor.v(40): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/divisor.v Line: 40
+Critical Warning (10846): Verilog HDL Instantiation warning at divisor.v(41): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/divisor.v Line: 41
+Critical Warning (10846): Verilog HDL Instantiation warning at PBL4.v(22): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 22
+Critical Warning (10846): Verilog HDL Instantiation warning at segmentos.v(20): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/segmentos.v Line: 20
+Critical Warning (10846): Verilog HDL Instantiation warning at segmentos.v(21): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/segmentos.v Line: 21
+Critical Warning (10846): Verilog HDL Instantiation warning at segmentos.v(22): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/segmentos.v Line: 22
+Critical Warning (10846): Verilog HDL Instantiation warning at segmentos.v(23): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/segmentos.v Line: 23
+Critical Warning (10846): Verilog HDL Instantiation warning at segmentos.v(24): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/segmentos.v Line: 24
+Critical Warning (10846): Verilog HDL Instantiation warning at segmentos.v(25): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/segmentos.v Line: 25
+Critical Warning (10846): Verilog HDL Instantiation warning at segmentos.v(26): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/segmentos.v Line: 26
+Critical Warning (10846): Verilog HDL Instantiation warning at PBL4.v(39): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 39
+Critical Warning (10846): Verilog HDL Instantiation warning at maquinaprim.v(49): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/maquinaprim.v Line: 49
+Critical Warning (10846): Verilog HDL Instantiation warning at maquinaprim.v(50): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/maquinaprim.v Line: 50
+Critical Warning (10846): Verilog HDL Instantiation warning at maquinaprim.v(51): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/maquinaprim.v Line: 51
+Critical Warning (10846): Verilog HDL Instantiation warning at PBL4.v(50): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 50
+Critical Warning (10846): Verilog HDL Instantiation warning at decodSENSORES.v(9): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/decodSENSORES.v Line: 9
+Critical Warning (10846): Verilog HDL Instantiation warning at decodSENSORES.v(10): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/decodSENSORES.v Line: 10
+Critical Warning (10846): Verilog HDL Instantiation warning at PBL4.v(53): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 53
+Critical Warning (10846): Verilog HDL Instantiation warning at PBL4.v(74): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 74
+Critical Warning (10846): Verilog HDL Instantiation warning at PBL4.v(79): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 79
+Critical Warning (10846): Verilog HDL Instantiation warning at PBL4.v(82): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 82
+Critical Warning (10846): Verilog HDL Instantiation warning at newmaquina3.v(52): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/newmaquina3.v Line: 52
+Critical Warning (10846): Verilog HDL Instantiation warning at newmaquina3.v(53): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/newmaquina3.v Line: 53
+Critical Warning (10846): Verilog HDL Instantiation warning at newmaquina3.v(54): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/newmaquina3.v Line: 54
+Critical Warning (10846): Verilog HDL Instantiation warning at PBL4.v(90): instance has no name File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 90
+Info (12127): Elaborating entity "PBL4" for the top level hierarchy
+Warning (10739): Verilog HDL warning at PBL4.v(27): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 27
+Warning (10739): Verilog HDL warning at PBL4.v(30): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 30
+Warning (10739): Verilog HDL warning at PBL4.v(31): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 31
+Warning (10739): Verilog HDL warning at PBL4.v(32): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 32
+Warning (10739): Verilog HDL warning at PBL4.v(33): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 33
+Warning (10739): Verilog HDL warning at PBL4.v(34): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 34
+Warning (10739): Verilog HDL warning at PBL4.v(35): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 35
+Warning (10739): Verilog HDL warning at PBL4.v(36): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 36
+Warning (10030): Net "d1es" at PBL4.v(41) has no driver or initial value, using a default initial value '0' File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 41
+Warning (10030): Net "d2es" at PBL4.v(41) has no driver or initial value, using a default initial value '0' File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 41
+Warning (10034): Output port "ponto" at PBL4.v(3) has no driver File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 3
+Info (12128): Elaborating entity "leveltopulse" for hierarchy "leveltopulse:comb_3" File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 10
+Info (12128): Elaborating entity "flipflopD" for hierarchy "leveltopulse:comb_3|flipflopD:comb_3" File: /home/aluno/Downloads/PBL3e4_CD/leveltopulse.v Line: 7
+Info (12128): Elaborating entity "divisor" for hierarchy "divisor:comb_8" File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 22
+Info (12128): Elaborating entity "flipflopT" for hierarchy "divisor:comb_8|flipflopT:fl1" File: /home/aluno/Downloads/PBL3e4_CD/divisor.v Line: 11
+Info (12128): Elaborating entity "segmentos" for hierarchy "segmentos:comb_17" File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 39
+Info (12128): Elaborating entity "mux4_1" for hierarchy "segmentos:comb_17|mux4_1:comb_5" File: /home/aluno/Downloads/PBL3e4_CD/segmentos.v Line: 20
+Info (12128): Elaborating entity "maquinaprim" for hierarchy "maquinaprim:comb_20" File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 50
+Info (12128): Elaborating entity "decodSENSORES" for hierarchy "decodSENSORES:comb_21" File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 53
+Info (12128): Elaborating entity "demux1x2" for hierarchy "decodSENSORES:comb_21|demux1x2:comb_4" File: /home/aluno/Downloads/PBL3e4_CD/decodSENSORES.v Line: 10
+Info (12128): Elaborating entity "maquinasecund" for hierarchy "maquinasecund:comb_41" File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 74
+Info (12128): Elaborating entity "decodERRORdeBEBIBA" for hierarchy "decodERRORdeBEBIBA:comb_43" File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 79
+Info (12128): Elaborating entity "decodBEBIDA" for hierarchy "decodBEBIDA:comb_44" File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 82
+Warning (10739): Verilog HDL warning at decodBEBIDA.v(23): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Downloads/PBL3e4_CD/decodBEBIDA.v Line: 23
+Warning (10739): Verilog HDL warning at decodBEBIDA.v(24): actual bit length 32 differs from formal bit length 1 File: /home/aluno/Downloads/PBL3e4_CD/decodBEBIDA.v Line: 24
+Warning (10034): Output port "d1" at decodBEBIDA.v(3) has no driver File: /home/aluno/Downloads/PBL3e4_CD/decodBEBIDA.v Line: 3
+Warning (10034): Output port "d2" at decodBEBIDA.v(3) has no driver File: /home/aluno/Downloads/PBL3e4_CD/decodBEBIDA.v Line: 3
+Info (12128): Elaborating entity "newmaquina3" for hierarchy "newmaquina3:comb_45" File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 90
+Info (13014): Ignored 24 buffer(s)
+    Info (13019): Ignored 24 SOFT buffer(s)
+Warning (12241): 10 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "d3" is stuck at VCC File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 3
+    Warning (13410): Pin "ponto" is stuck at GND File: /home/aluno/Downloads/PBL3e4_CD/PBL4.v Line: 3
+Info (21057): Implemented 104 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 25 output pins
+    Info (21061): Implemented 70 logic cells
+Info (144001): Generated suppressed messages file /home/aluno/Downloads/PBL3e4_CD/output_files/PBL4.map.smsg
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 74 warnings
+    Info: Peak virtual memory: 340 megabytes
+    Info: Processing ended: Wed Jun 14 16:10:26 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:11
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/aluno/Downloads/PBL3e4_CD/output_files/PBL4.map.smsg.
+
+

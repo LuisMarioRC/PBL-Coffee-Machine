@@ -1,0 +1,29 @@
+module segmentos(segmentosespera, segmentoserrosensor, segmentosbebida, segmentoserrobebida, A, B, C, E, sa, sb, sc, sd, se, sf, sg);
+	
+	input [6:0] segmentosespera, segmentoserrosensor, segmentosbebida, segmentoserrobebida;
+	input  A, B, C, E;
+	
+	output sa, sb, sc, sd, se, sf, sg;
+
+	wire s0, s1;
+	
+	wire and1, and2, and3;
+	
+	and(and1, ~A, ~B, C, ~E);
+	and(and2, ~A, ~B, ~C, E);
+	
+	or(s0, and1, and2);
+	
+	and(and3, ~A, B, ~C, ~E);
+	
+	or(s1, and2, and3);
+	
+	mux4_1(segmentosespera[6], segmentoserrosensor[6], segmentosbebida[6], segmentoserrobebida[6], s0,  s1, sa);
+	mux4_1(segmentosespera[5], segmentoserrosensor[5], segmentosbebida[5], segmentoserrobebida[5], s0,  s1, sb);
+	mux4_1(segmentosespera[4], segmentoserrosensor[4], segmentosbebida[4], segmentoserrobebida[4], s0,  s1, sc);
+	mux4_1(segmentosespera[3], segmentoserrosensor[3], segmentosbebida[3], segmentoserrobebida[3], s0,  s1, sd);
+	mux4_1(segmentosespera[2], segmentoserrosensor[2], segmentosbebida[2], segmentoserrobebida[2], s0,  s1, se);
+	mux4_1(segmentosespera[1], segmentoserrosensor[1], segmentosbebida[1], segmentoserrobebida[1], s0,  s1, sf);
+	mux4_1(segmentosespera[0], segmentoserrosensor[0], segmentosbebida[0], segmentoserrobebida[0], s0,  s1, sg);
+	
+endmodule
